@@ -8,90 +8,136 @@
 <style>
   :root {
     --azul: #003F86;
-    --azul-oscuro: #002a5c;
+    --azul-claro: #cde2fb;
     --naranja: #F47C02;
-    --gris-fondo: #f4f6f9;
-    --gris-borde: #e1e5ea;
-    --texto: #1c2733;
-    --verde-ok: #1e8e3e;
-    --rojo-alerta: #d93025;
+    --gris-fondo: #f9f9f7;
+    --superficie: #ffffff;
+    --gris-borde: #e1e0d9;
+    --texto: #0b0b0b;
+    --texto-sec: #52514e;
+    --texto-muted: #898781;
+    --good: #0ca30c;
+    --warning: #fab219;
+    --critical: #d03b3b;
+    --emphasis-gray-1: #b9c4d1;
+    --emphasis-gray-2: #8fa0b3;
+    --emphasis-gray-3: #6b7c8f;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     background: var(--gris-fondo);
     color: var(--texto);
   }
   header {
     background: var(--azul);
     color: #fff;
-    padding: 20px 32px;
+    padding: 18px 32px;
     display: flex;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   }
-  header img { height: 48px; background: #fff; padding: 6px 10px; border-radius: 6px; }
-  header h1 { font-size: 1.4rem; margin: 0; font-weight: 600; }
-  header p { margin: 2px 0 0; font-size: 0.85rem; color: #cfe0f5; }
-  main { max-width: 1100px; margin: 0 auto; padding: 32px 20px 60px; }
-  .meta-banner {
-    background: #fff;
-    border-left: 6px solid var(--naranja);
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin-bottom: 28px;
+  header img { height: 40px; background: #fff; padding: 5px 8px; border-radius: 6px; }
+  header h1 { font-size: 1.15rem; margin: 0; font-weight: 600; }
+  header p { margin: 2px 0 0; font-size: 0.8rem; color: #cfe0f5; }
+  main { max-width: 1080px; margin: 0 auto; padding: 28px 20px 56px; }
+
+  /* Hero */
+  .hero {
+    background: var(--superficie);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+    border: 1px solid var(--gris-borde);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 24px;
     flex-wrap: wrap;
-    gap: 10px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
-  .meta-banner .label { font-size: 0.85rem; color: #556; text-transform: uppercase; letter-spacing: .04em; }
-  .meta-banner .valor { font-size: 1.6rem; font-weight: 700; color: var(--azul); }
+  .hero-figure { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .hero-figure .valor { font-size: 3.2rem; font-weight: 600; line-height: 1; }
+  .hero-figure .valor.good { color: var(--good); }
+  .hero-figure .valor.warning { color: #b8790a; }
+  .hero-figure .valor.critical { color: var(--critical); }
+  .hero-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--texto-muted); margin-bottom: 6px; }
+  .hero-status {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.92rem; font-weight: 600; color: var(--texto);
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .hero-meta { text-align: right; }
+  .hero-meta .meta-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--texto-muted); }
+  .hero-meta .meta-valor { font-size: 1.4rem; font-weight: 600; color: var(--azul); }
+  .hero-narrativa { font-size: 0.88rem; color: var(--texto-sec); margin-top: 10px; max-width: 640px; }
+
+  /* Semaforo cards */
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-    margin-bottom: 32px;
-  }
-  .card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 18px 20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    border-top: 4px solid var(--azul);
-  }
-  .card.total { border-top-color: var(--naranja); }
-  .card h3 { margin: 0 0 10px; font-size: 0.95rem; color: #445; text-transform: uppercase; letter-spacing: .03em; }
-  .card .tasa { font-size: 2.1rem; font-weight: 700; }
-  .card .tasa.ok { color: var(--verde-ok); }
-  .card .tasa.bajo { color: var(--rojo-alerta); }
-  .card .detalle { font-size: 0.82rem; color: #667; margin-top: 6px; }
-  .card .gap { font-size: 0.82rem; margin-top: 4px; font-weight: 600; }
-  .panel {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
     margin-bottom: 28px;
   }
-  .panel h2 { margin-top: 0; font-size: 1.05rem; color: var(--azul); }
-  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--gris-borde); }
-  th { color: #556; font-weight: 600; }
-  tr.total-row td { font-weight: 700; background: #f8fafc; }
-  footer { text-align: center; font-size: 0.78rem; color: #889; padding: 20px; }
-  #estado { font-size: 0.85rem; color: #889; margin-bottom: 18px; }
+  .card {
+    background: var(--superficie);
+    border-radius: 10px;
+    padding: 18px 20px;
+    border: 1px solid var(--gris-borde);
+  }
+  .card h3 { margin: 0 0 4px; font-size: 0.9rem; color: var(--texto); font-weight: 600; }
+  .card .estado { font-size: 0.8rem; margin-bottom: 12px; }
+  .card .cifras { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+  .card .tasa-num { font-size: 1.5rem; font-weight: 600; }
+  .card .gap-num { font-size: 0.78rem; color: var(--texto-muted); }
+  .meter-track {
+    position: relative;
+    height: 10px;
+    border-radius: 5px;
+    background: var(--azul-claro);
+    margin: 6px 0 4px;
+    overflow: visible;
+  }
+  .meter-fill { position: absolute; top: 0; left: 0; height: 100%; border-radius: 5px; }
+  .meter-meta-mark {
+    position: absolute; top: -3px; width: 2px; height: 16px;
+    background: var(--texto-sec);
+  }
+  .meter-caption { font-size: 0.72rem; color: var(--texto-muted); display: flex; justify-content: space-between; }
+
+  .panel {
+    background: var(--superficie);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid var(--gris-borde);
+    margin-bottom: 24px;
+  }
+  .panel h2 { margin: 0 0 4px; font-size: 1rem; color: var(--texto); }
+  .panel .subt { font-size: 0.8rem; color: var(--texto-muted); margin-bottom: 16px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 0.78rem; color: var(--texto-sec); margin-top: 10px; flex-wrap: wrap; }
+  .chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-line { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+
+  details.detalle summary {
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--azul);
+    padding: 4px 0;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 12px; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--gris-borde); font-variant-numeric: tabular-nums; }
+  th { color: var(--texto-muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .03em; }
+  tr.total-row td { font-weight: 700; background: #f5f7fa; }
+  footer { text-align: center; font-size: 0.75rem; color: var(--texto-muted); padding: 18px; }
+  #estado { font-size: 0.85rem; color: var(--texto-muted); margin-bottom: 18px; }
 </style>
 </head>
 <body>
 <header>
   <img src="assets/logo-elecnor.png" alt="Elecnor">
   <div>
-    <h1>Tasa de Instalación</h1>
+    <h1>Tasa de Instalación · Resumen Ejecutivo</h1>
     <p>Zonal Valparaíso · Viña del Mar · San Antonio</p>
   </div>
 </header>
@@ -99,14 +145,20 @@
 <main>
   <div id="estado">Cargando datos...</div>
 
-  <div class="meta-banner">
+  <div class="hero" id="heroBanner" style="display:none;">
     <div>
-      <div class="label">Meta general</div>
-      <div class="valor" id="metaValor">80,70%</div>
+      <div class="hero-label">Tasa de instalación total</div>
+      <div class="hero-figure">
+        <span class="valor" id="heroValor">—</span>
+        <span class="hero-status" id="heroStatus"></span>
+      </div>
+      <div class="hero-narrativa" id="heroNarrativa"></div>
     </div>
-    <div>
-      <div class="label">Última actualización</div>
-      <div class="valor" id="fechaActualizacion" style="font-size:1.1rem;">—</div>
+    <div class="hero-meta">
+      <div class="meta-label">Meta general</div>
+      <div class="meta-valor" id="metaValor">—</div>
+      <div class="meta-label" style="margin-top:10px;">Actualizado</div>
+      <div style="font-size:0.95rem; font-weight:600;" id="fechaActualizacion">—</div>
     </div>
   </div>
 
@@ -114,23 +166,40 @@
 
   <div class="panel">
     <h2>Evolución diaria</h2>
+    <div class="subt">Tasa de instalación por agencia frente a la meta</div>
     <canvas id="grafico" height="90"></canvas>
+    <div class="chart-legend" id="chartLegend"></div>
   </div>
 
   <div class="panel">
-    <h2>Detalle por día y agencia</h2>
-    <table>
-      <thead>
-        <tr><th>Fecha</th><th>Agencia</th><th>Completadas</th><th>Canceladas</th><th>Base</th><th>Tasa</th></tr>
-      </thead>
-      <tbody id="tablaDetalle"></tbody>
-    </table>
+    <details class="detalle">
+      <summary>Detalle operativo por día y agencia</summary>
+      <table>
+        <thead>
+          <tr><th>Fecha</th><th>Agencia</th><th>Completadas</th><th>Canceladas</th><th>Base</th><th>Tasa</th></tr>
+        </thead>
+        <tbody id="tablaDetalle"></tbody>
+      </table>
+    </details>
   </div>
 </main>
 
 <footer>Fórmula: Completadas / (Completadas + Canceladas) · Fuente: TOA ELECNOR</footer>
 
 <script>
+const COLOR_GOOD = '#0ca30c';
+const COLOR_WARNING = '#fab219';
+const COLOR_CRITICAL = '#d03b3b';
+const COLOR_WARNING_TEXT = '#b8790a';
+
+function estadoDe(tasa, meta) {
+  if (tasa >= meta) return { label: 'Cumple meta', color: COLOR_GOOD, clase: 'good' };
+  if (tasa >= meta - 5) return { label: 'Cerca de meta', color: COLOR_WARNING, clase: 'warning' };
+  return { label: 'Crítico', color: COLOR_CRITICAL, clase: 'critical' };
+}
+
+function fmt(n) { return n.toFixed(2).replace('.', ','); }
+
 async function cargar() {
   const resp = await fetch('data/historico.json?_=' + Date.now());
   const data = await resp.json();
@@ -138,71 +207,131 @@ async function cargar() {
   const registros = data.registros;
 
   document.getElementById('estado').style.display = 'none';
-  document.getElementById('metaValor').textContent = meta.toFixed(2).replace('.', ',') + '%';
+  document.getElementById('heroBanner').style.display = 'flex';
+  document.getElementById('metaValor').textContent = fmt(meta) + '%';
   document.getElementById('fechaActualizacion').textContent = data.actualizado;
 
   const fechas = [...new Set(registros.map(r => r.Fecha))].sort();
   const ultimaFecha = fechas[fechas.length - 1];
   const ultimos = registros.filter(r => r.Fecha === ultimaFecha);
+  const total = ultimos.find(r => r.Agencia === 'TOTAL');
+  const agencias = ultimos.filter(r => r.Agencia !== 'TOTAL').sort((a, b) => parseFloat(b.Tasa) - parseFloat(a.Tasa));
 
+  // Hero
+  if (total) {
+    const tasaTotal = parseFloat(total.Tasa);
+    const est = estadoDe(tasaTotal, meta);
+    const heroValor = document.getElementById('heroValor');
+    heroValor.textContent = fmt(tasaTotal) + '%';
+    heroValor.className = 'valor ' + est.clase;
+    document.getElementById('heroStatus').innerHTML =
+      `<span class="dot" style="background:${est.color}"></span>${est.label}`;
+
+    const gap = (tasaTotal - meta);
+    const mejor = agencias[0];
+    const peor = agencias[agencias.length - 1];
+    let narrativa = `Brecha de ${gap >= 0 ? '+' : ''}${fmt(gap)} pp frente a la meta general (${total.Completadas} completadas de ${total.Base} gestionadas). `;
+    if (gap >= 0) {
+      narrativa += `Las tres agencias sostienen el resultado.`;
+    } else {
+      narrativa += `${mejor.Agencia} es la más cercana a la meta (${fmt(parseFloat(mejor.Tasa))}%); ${peor.Agencia} requiere atención prioritaria (${fmt(parseFloat(peor.Tasa))}%).`;
+    }
+    document.getElementById('heroNarrativa').textContent = narrativa;
+  }
+
+  // Semaforo cards (por agencia)
   const cardsEl = document.getElementById('cards');
   cardsEl.innerHTML = '';
-  ultimos.forEach(r => {
+  agencias.forEach(r => {
     const tasa = parseFloat(r.Tasa);
-    const ok = tasa >= meta;
-    const gap = (tasa - meta).toFixed(2);
+    const est = estadoDe(tasa, meta);
+    const gap = tasa - meta;
+    const fillPct = Math.min(tasa, 100);
+    const metaPct = Math.min(meta, 100);
     const div = document.createElement('div');
-    div.className = 'card' + (r.Agencia === 'TOTAL' ? ' total' : '');
+    div.className = 'card';
     div.innerHTML = `
       <h3>${r.Agencia}</h3>
-      <div class="tasa ${ok ? 'ok' : 'bajo'}">${tasa.toFixed(2).replace('.', ',')}%</div>
-      <div class="detalle">${r.Completadas} completadas / ${r.Base} base</div>
-      <div class="gap" style="color:${ok ? 'var(--verde-ok)' : 'var(--rojo-alerta)'}">
-        ${ok ? '+' : ''}${gap.replace('.', ',')} pp vs meta
-      </div>`;
+      <div class="estado"><span class="dot" style="background:${est.color}"></span> ${est.label}</div>
+      <div class="cifras">
+        <span class="tasa-num">${fmt(tasa)}%</span>
+        <span class="gap-num">${gap >= 0 ? '+' : ''}${fmt(gap)} pp vs meta</span>
+      </div>
+      <div class="meter-track">
+        <div class="meter-fill" style="width:${fillPct}%; background:${est.color};"></div>
+        <div class="meter-meta-mark" style="left:${metaPct}%;"></div>
+      </div>
+      <div class="meter-caption"><span>${r.Completadas} completadas</span><span>${r.Base} base</span></div>`;
     cardsEl.appendChild(div);
   });
 
-  const agenciasUnicas = [...new Set(registros.map(r => r.Agencia))];
-  const colores = { 'TOTAL': '#F47C02' };
-  const paleta = ['#003F86', '#5B8DEF', '#8AA9C4', '#2FA37A', '#A45FD6'];
-  let i = 0;
-  agenciasUnicas.forEach(a => { if (!colores[a]) { colores[a] = paleta[i % paleta.length]; i++; } });
-
-  const datasets = agenciasUnicas.map(ag => ({
+  // Grafico: TOTAL en enfasis (naranja), agencias en gris
+  const agenciasUnicas = [...new Set(registros.map(r => r.Agencia))].filter(a => a !== 'TOTAL');
+  const grisEnfasis = ['#b9c4d1', '#8fa0b3', '#6b7c8f'];
+  const datasets = agenciasUnicas.map((ag, i) => ({
     label: ag,
     data: fechas.map(f => {
       const rec = registros.find(r => r.Fecha === f && r.Agencia === ag);
       return rec ? parseFloat(rec.Tasa) : null;
     }),
-    borderColor: colores[ag],
-    backgroundColor: colores[ag],
-    borderWidth: ag === 'TOTAL' ? 3 : 2,
+    borderColor: grisEnfasis[i % grisEnfasis.length],
+    backgroundColor: grisEnfasis[i % grisEnfasis.length],
+    borderWidth: 2,
     tension: 0.25,
-    spanGaps: true
+    spanGaps: true,
+    pointRadius: 3
   }));
+  datasets.push({
+    label: 'TOTAL',
+    data: fechas.map(f => {
+      const rec = registros.find(r => r.Fecha === f && r.Agencia === 'TOTAL');
+      return rec ? parseFloat(rec.Tasa) : null;
+    }),
+    borderColor: '#F47C02',
+    backgroundColor: '#F47C02',
+    borderWidth: 3,
+    tension: 0.25,
+    spanGaps: true,
+    pointRadius: 4
+  });
+  datasets.push({
+    label: 'Meta',
+    data: fechas.map(() => meta),
+    borderColor: '#52514e',
+    borderDash: [4, 4],
+    borderWidth: 1.5,
+    pointRadius: 0,
+    tension: 0
+  });
 
   new Chart(document.getElementById('grafico'), {
     type: 'line',
     data: { labels: fechas, datasets: datasets },
     options: {
       responsive: true,
-      plugins: {
-        legend: { position: 'bottom' },
-        annotation: {}
-      },
+      plugins: { legend: { display: false } },
+      interaction: { mode: 'nearest', axis: 'x', intersect: false },
       scales: {
-        y: { title: { display: true, text: 'Tasa de instalación (%)' } }
+        y: { title: { display: true, text: 'Tasa de instalación (%)' }, grid: { color: '#e1e0d9' } },
+        x: { grid: { display: false } }
       }
     }
   });
 
+  const legendEl = document.getElementById('chartLegend');
+  legendEl.innerHTML = agenciasUnicas.map((ag, i) =>
+    `<span><span class="legend-line" style="background:${grisEnfasis[i % grisEnfasis.length]}"></span>${ag}</span>`
+  ).join('') +
+  `<span><span class="legend-line" style="background:#F47C02"></span>TOTAL</span>` +
+  `<span><span class="legend-line" style="background:#52514e; height:2px; opacity:.6;"></span>Meta (${fmt(meta)}%)</span>`;
+
+  // Tabla detalle
   const tbody = document.getElementById('tablaDetalle');
   tbody.innerHTML = '';
   [...registros].sort((a, b) => (a.Fecha < b.Fecha ? 1 : -1)).forEach(r => {
     const tr = document.createElement('tr');
     if (r.Agencia === 'TOTAL') tr.className = 'total-row';
-    tr.innerHTML = `<td>${r.Fecha}</td><td>${r.Agencia}</td><td>${r.Completadas}</td><td>${r.Canceladas}</td><td>${r.Base}</td><td>${parseFloat(r.Tasa).toFixed(2).replace('.', ',')}%</td>`;
+    tr.innerHTML = `<td>${r.Fecha}</td><td>${r.Agencia}</td><td>${r.Completadas}</td><td>${r.Canceladas}</td><td>${r.Base}</td><td>${fmt(parseFloat(r.Tasa))}%</td>`;
     tbody.appendChild(tr);
   });
 }
