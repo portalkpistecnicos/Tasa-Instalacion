@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasa de Instalación · ELECNOR</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  :root {
+    --azul: #003F86;
+    --azul-oscuro: #002a5c;
+    --naranja: #F47C02;
+    --gris-fondo: #f4f6f9;
+    --gris-borde: #e1e5ea;
+    --texto: #1c2733;
+    --verde-ok: #1e8e3e;
+    --rojo-alerta: #d93025;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--gris-fondo);
+    color: var(--texto);
+  }
+  header {
+    background: var(--azul);
+    color: #fff;
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header img { height: 48px; background: #fff; padding: 6px 10px; border-radius: 6px; }
+  header h1 { font-size: 1.4rem; margin: 0; font-weight: 600; }
+  header p { margin: 2px 0 0; font-size: 0.85rem; color: #cfe0f5; }
+  main { max-width: 1100px; margin: 0 auto; padding: 32px 20px 60px; }
+  .meta-banner {
+    background: #fff;
+    border-left: 6px solid var(--naranja);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .meta-banner .label { font-size: 0.85rem; color: #556; text-transform: uppercase; letter-spacing: .04em; }
+  .meta-banner .valor { font-size: 1.6rem; font-weight: 700; color: var(--azul); }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--azul);
+  }
+  .card.total { border-top-color: var(--naranja); }
+  .card h3 { margin: 0 0 10px; font-size: 0.95rem; color: #445; text-transform: uppercase; letter-spacing: .03em; }
+  .card .tasa { font-size: 2.1rem; font-weight: 700; }
+  .card .tasa.ok { color: var(--verde-ok); }
+  .card .tasa.bajo { color: var(--rojo-alerta); }
+  .card .detalle { font-size: 0.82rem; color: #667; margin-top: 6px; }
+  .card .gap { font-size: 0.82rem; margin-top: 4px; font-weight: 600; }
+  .panel {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+  }
+  .panel h2 { margin-top: 0; font-size: 1.05rem; color: var(--azul); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--gris-borde); }
+  th { color: #556; font-weight: 600; }
+  tr.total-row td { font-weight: 700; background: #f8fafc; }
+  footer { text-align: center; font-size: 0.78rem; color: #889; padding: 20px; }
+  #estado { font-size: 0.85rem; color: #889; margin-bottom: 18px; }
+</style>
+</head>
+<body>
+<header>
+  <img src="assets/logo-elecnor.png" alt="Elecnor">
+  <div>
+    <h1>Tasa de Instalación</h1>
+    <p>Zonal Valparaíso · Viña del Mar · San Antonio</p>
+  </div>
+</header>
+
+<main>
+  <div id="estado">Cargando datos...</div>
+
+  <div class="meta-banner">
+    <div>
+      <div class="label">Meta general</div>
+      <div class="valor" id="metaValor">80,07%</div>
+    </div>
+    <div>
+      <div class="label">Última actualización</div>
+      <div class="valor" id="fechaActualizacion" style="font-size:1.1rem;">—</div>
+    </div>
+  </div>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="panel">
+    <h2>Evolución diaria</h2>
+    <canvas id="grafico" height="90"></canvas>
+  </div>
+
+  <div class="panel">
+    <h2>Detalle por día y agencia</h2>
+    <table>
+      <thead>
+        <tr><th>Fecha</th><th>Agencia</th><th>Completadas</th><th>Canceladas</th><th>Base</th><th>Tasa</th></tr>
+      </thead>
+      <tbody id="tablaDetalle"></tbody>
+    </table>
+  </div>
+</main>
+
+<footer>Fórmula: Completadas / (Completadas + Canceladas) · Fuente: TOA ELECNOR</footer>
+
+<script>
+async function cargar() {
+  const resp = await fetch('data/historico.json?_=' + Date.now());
+  const data = await resp.json();
+  const meta = data.meta;
+  const registros = data.registros;
+
+  document.getElementById('estado').style.display = 'none';
+  document.getElementById('metaValor').textContent = meta.toFixed(2).replace('.', ',') + '%';
+  document.getElementById('fechaActualizacion').textContent = data.actualizado;
+
+  const fechas = [...new Set(registros.map(r => r.Fecha))].sort();
+  const ultimaFecha = fechas[fechas.length - 1];
+  const ultimos = registros.filter(r => r.Fecha === ultimaFecha);
+
+  const cardsEl = document.getElementById('cards');
+  cardsEl.innerHTML = '';
+  ultimos.forEach(r => {
+    const tasa = parseFloat(r.Tasa);
+    const ok = tasa >= meta;
+    const gap = (tasa - meta).toFixed(2);
+    const div = document.createElement('div');
+    div.className = 'card' + (r.Agencia === 'TOTAL' ? ' total' : '');
+    div.innerHTML = `
+      <h3>${r.Agencia}</h3>
+      <div class="tasa ${ok ? 'ok' : 'bajo'}">${tasa.toFixed(2).replace('.', ',')}%</div>
+      <div class="detalle">${r.Completadas} completadas / ${r.Base} base</div>
+      <div class="gap" style="color:${ok ? 'var(--verde-ok)' : 'var(--rojo-alerta)'}">
+        ${ok ? '+' : ''}${gap.replace('.', ',')} pp vs meta
+      </div>`;
+    cardsEl.appendChild(div);
+  });
+
+  const agenciasUnicas = [...new Set(registros.map(r => r.Agencia))];
+  const colores = { 'TOTAL': '#F47C02' };
+  const paleta = ['#003F86', '#5B8DEF', '#8AA9C4', '#2FA37A', '#A45FD6'];
+  let i = 0;
+  agenciasUnicas.forEach(a => { if (!colores[a]) { colores[a] = paleta[i % paleta.length]; i++; } });
+
+  const datasets = agenciasUnicas.map(ag => ({
+    label: ag,
+    data: fechas.map(f => {
+      const rec = registros.find(r => r.Fecha === f && r.Agencia === ag);
+      return rec ? parseFloat(rec.Tasa) : null;
+    }),
+    borderColor: colores[ag],
+    backgroundColor: colores[ag],
+    borderWidth: ag === 'TOTAL' ? 3 : 2,
+    tension: 0.25,
+    spanGaps: true
+  }));
+
+  new Chart(document.getElementById('grafico'), {
+    type: 'line',
+    data: { labels: fechas, datasets: datasets },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        annotation: {}
+      },
+      scales: {
+        y: { title: { display: true, text: 'Tasa de instalación (%)' } }
+      }
+    }
+  });
+
+  const tbody = document.getElementById('tablaDetalle');
+  tbody.innerHTML = '';
+  [...registros].sort((a, b) => (a.Fecha < b.Fecha ? 1 : -1)).forEach(r => {
+    const tr = document.createElement('tr');
+    if (r.Agencia === 'TOTAL') tr.className = 'total-row';
+    tr.innerHTML = `<td>${r.Fecha}</td><td>${r.Agencia}</td><td>${r.Completadas}</td><td>${r.Canceladas}</td><td>${r.Base}</td><td>${parseFloat(r.Tasa).toFixed(2).replace('.', ',')}%</td>`;
+    tbody.appendChild(tr);
+  });
+}
+cargar().catch(e => {
+  document.getElementById('estado').textContent = 'No se pudo cargar data/historico.json todavía. Ejecuta el script de actualización.';
+});
+</script>
+</body>
+</html>
