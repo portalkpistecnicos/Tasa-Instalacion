@@ -176,7 +176,7 @@
       <summary>Detalle operativo por día y agencia</summary>
       <table>
         <thead>
-          <tr><th>Fecha</th><th>Agencia</th><th>Completadas</th><th>Canceladas</th><th>Base</th><th>Tasa</th></tr>
+          <tr><th>Fecha</th><th>Agencia</th><th>Terminadas (emitidas mes)</th><th>Canceladas (emitidas mes)</th><th>Base</th><th>Tasa</th></tr>
         </thead>
         <tbody id="tablaDetalle"></tbody>
       </table>
@@ -184,7 +184,7 @@
   </div>
 </main>
 
-<footer>Fórmula: Completadas / (Completadas + Canceladas) · Fuente: TOA ELECNOR</footer>
+<footer>Fórmula: Terminadas (emitidas mes) / (Terminadas + Canceladas, ambas emitidas mes) · Fuente: TOA ELECNOR</footer>
 
 <script>
 const COLOR_GOOD = '#0ca30c';
@@ -230,7 +230,7 @@ async function cargar() {
     const gap = (tasaTotal - meta);
     const mejor = agencias[0];
     const peor = agencias[agencias.length - 1];
-    let narrativa = `Brecha de ${gap >= 0 ? '+' : ''}${fmt(gap)} pp frente a la meta general (${total.Completadas} completadas de ${total.Base} gestionadas). `;
+    let narrativa = `Brecha de ${gap >= 0 ? '+' : ''}${fmt(gap)} pp frente a la meta general (${total.Completadas} terminadas de ${total.Base} emitidas este mes). `;
     if (gap >= 0) {
       narrativa += `Las tres agencias sostienen el resultado.`;
     } else {
@@ -261,7 +261,7 @@ async function cargar() {
         <div class="meter-fill" style="width:${fillPct}%; background:${est.color};"></div>
         <div class="meter-meta-mark" style="left:${metaPct}%;"></div>
       </div>
-      <div class="meter-caption"><span>${r.Completadas} completadas</span><span>${r.Base} base</span></div>`;
+      <div class="meter-caption"><span>${r.Completadas} terminadas</span><span>${r.Base} base</span></div>`;
     cardsEl.appendChild(div);
   });
 
