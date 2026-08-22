@@ -129,6 +129,40 @@
   th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--gris-borde); font-variant-numeric: tabular-nums; }
   th { color: var(--texto-muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .03em; }
   tr.total-row td { font-weight: 700; background: #f5f7fa; }
+  .filtro-fecha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 14px 0 10px;
+  }
+  .filtro-fecha label { font-size: 0.85rem; color: var(--texto-sec); font-weight: 600; }
+  .filtro-fecha select {
+    flex: 1 1 220px;
+    min-width: 160px;
+    height: 44px;
+    max-height: 44px;
+    overflow: hidden;
+    padding: 8px 36px 8px 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--texto);
+    background-color: var(--superficie);
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%2352514e' d='M5.5 7.5l4.5 4.5 4.5-4.5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px;
+  }
+  .filtro-fecha select:focus { outline: 2px solid var(--azul); outline-offset: 1px; }
+  @media (max-width: 480px) {
+    .filtro-fecha { flex-direction: column; align-items: stretch; }
+    .filtro-fecha select { width: 100%; }
+  }
+  .tabla-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   footer { text-align: center; font-size: 0.75rem; color: var(--texto-muted); padding: 18px; }
   #estado { font-size: 0.85rem; color: var(--texto-muted); margin-bottom: 18px; }
 </style>
@@ -174,12 +208,18 @@
   <div class="panel">
     <details class="detalle">
       <summary>Detalle operativo por día y agencia</summary>
-      <table>
-        <thead>
-          <tr><th>Fecha</th><th>Agencia</th><th>Terminadas (emitidas mes)</th><th>Canceladas (emitidas mes)</th><th>Base</th><th>Tasa</th></tr>
-        </thead>
-        <tbody id="tablaDetalle"></tbody>
-      </table>
+      <div class="filtro-fecha">
+        <label for="selectFecha">Fecha</label>
+        <select id="selectFecha"></select>
+      </div>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr><th>Fecha</th><th>Agencia</th><th>Terminadas (emitidas mes)</th><th>Canceladas (emitidas mes)</th><th>Base</th><th>Tasa</th></tr>
+          </thead>
+          <tbody id="tablaDetalle"></tbody>
+        </table>
+      </div>
     </details>
   </div>
 </main>
@@ -329,15 +369,28 @@ async function cargar() {
   `<span><span class="legend-line" style="background:#F47C02"></span>TOTAL</span>` +
   `<span><span class="legend-line" style="background:#52514e; height:2px; opacity:.6;"></span>Meta (${fmt(meta)}%)</span>`;
 
-  // Tabla detalle
-  const tbody = document.getElementById('tablaDetalle');
-  tbody.innerHTML = '';
-  [...registros].sort((a, b) => (a.Fecha < b.Fecha ? 1 : -1)).forEach(r => {
-    const tr = document.createElement('tr');
-    if (r.Agencia === 'TOTAL') tr.className = 'total-row';
-    tr.innerHTML = `<td>${r.Fecha}</td><td>${r.Agencia}</td><td>${r.Completadas}</td><td>${r.Canceladas}</td><td>${r.Base}</td><td>${fmt(parseFloat(r.Tasa))}%</td>`;
-    tbody.appendChild(tr);
-  });
+  // Tabla detalle + combo de fecha
+  function pintarTabla(filtroFecha) {
+    const tbody = document.getElementById('tablaDetalle');
+    tbody.innerHTML = '';
+    const filas = filtroFecha === 'todas'
+      ? [...registros].sort((a, b) => (a.Fecha < b.Fecha ? 1 : -1))
+      : registros.filter(r => r.Fecha === filtroFecha);
+    filas.forEach(r => {
+      const tr = document.createElement('tr');
+      if (r.Agencia === 'TOTAL') tr.className = 'total-row';
+      tr.innerHTML = `<td>${r.Fecha}</td><td>${r.Agencia}</td><td>${r.Completadas}</td><td>${r.Canceladas}</td><td>${r.Base}</td><td>${fmt(parseFloat(r.Tasa))}%</td>`;
+      tbody.appendChild(tr);
+    });
+  }
+
+  const selectFecha = document.getElementById('selectFecha');
+  const fechasDesc = [...fechas].sort().reverse();
+  selectFecha.innerHTML = `<option value="todas">Todas las fechas</option>` +
+    fechasDesc.map(f => `<option value="${f}">${f}</option>`).join('');
+  selectFecha.value = fechasDesc[0];
+  selectFecha.addEventListener('change', () => pintarTabla(selectFecha.value));
+  pintarTabla(selectFecha.value);
 }
 cargar().catch(e => {
   document.getElementById('estado').textContent = 'No se pudo cargar data/historico.json todavía. Ejecuta el script de actualización.';
