@@ -269,43 +269,47 @@ async function cargar() {
   const agenciasUnicas = [...new Set(registros.map(r => r.Agencia))].filter(a => a !== 'TOTAL');
   const grisEnfasis = ['#b9c4d1', '#8fa0b3', '#6b7c8f'];
   const datasets = agenciasUnicas.map((ag, i) => ({
+    type: 'bar',
     label: ag,
     data: fechas.map(f => {
       const rec = registros.find(r => r.Fecha === f && r.Agencia === ag);
       return rec ? parseFloat(rec.Tasa) : null;
     }),
-    borderColor: grisEnfasis[i % grisEnfasis.length],
     backgroundColor: grisEnfasis[i % grisEnfasis.length],
-    borderWidth: 2,
-    tension: 0.25,
-    spanGaps: true,
-    pointRadius: 3
+    borderRadius: 4,
+    borderSkipped: false,
+    maxBarThickness: 22,
+    categoryPercentage: 0.7,
+    barPercentage: 0.92
   }));
   datasets.push({
+    type: 'bar',
     label: 'TOTAL',
     data: fechas.map(f => {
       const rec = registros.find(r => r.Fecha === f && r.Agencia === 'TOTAL');
       return rec ? parseFloat(rec.Tasa) : null;
     }),
-    borderColor: '#F47C02',
     backgroundColor: '#F47C02',
-    borderWidth: 3,
-    tension: 0.25,
-    spanGaps: true,
-    pointRadius: 4
+    borderRadius: 4,
+    borderSkipped: false,
+    maxBarThickness: 22,
+    categoryPercentage: 0.7,
+    barPercentage: 0.92
   });
   datasets.push({
+    type: 'line',
     label: 'Meta',
     data: fechas.map(() => meta),
     borderColor: '#52514e',
     borderDash: [4, 4],
     borderWidth: 1.5,
     pointRadius: 0,
-    tension: 0
+    tension: 0,
+    order: -1
   });
 
   new Chart(document.getElementById('grafico'), {
-    type: 'line',
+    type: 'bar',
     data: { labels: fechas, datasets: datasets },
     options: {
       responsive: true,
