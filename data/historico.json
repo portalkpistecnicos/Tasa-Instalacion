@@ -1,34 +1,66 @@
-﻿{"meta": 80.7, "actualizado": "2026-08-20", "registros": [
+﻿{"meta": 80.7, "actualizado": "2026-08-22", "registros": [
     {
         "Fecha":  "2026-08-20",
         "Agencia":  "SAN ANTONIO",
-        "Completadas":  307,
-        "Canceladas":  142,
-        "Base":  449,
-        "Tasa":  68.37
+        "Completadas":  "307",
+        "Canceladas":  "142",
+        "Base":  "449",
+        "Tasa":  "68,37"
     },
     {
         "Fecha":  "2026-08-20",
         "Agencia":  "TOTAL",
-        "Completadas":  2595,
-        "Canceladas":  1023,
-        "Base":  3618,
-        "Tasa":  71.72
+        "Completadas":  "2595",
+        "Canceladas":  "1023",
+        "Base":  "3618",
+        "Tasa":  "71,72"
     },
     {
         "Fecha":  "2026-08-20",
         "Agencia":  "VALPARAISO",
-        "Completadas":  833,
-        "Canceladas":  394,
-        "Base":  1227,
-        "Tasa":  67.89
+        "Completadas":  "833",
+        "Canceladas":  "394",
+        "Base":  "1227",
+        "Tasa":  "67,89"
     },
     {
         "Fecha":  "2026-08-20",
         "Agencia":  "VINA DEL MAR",
-        "Completadas":  1455,
-        "Canceladas":  487,
-        "Base":  1942,
-        "Tasa":  74.92
+        "Completadas":  "1455",
+        "Canceladas":  "487",
+        "Base":  "1942",
+        "Tasa":  "74,92"
+    },
+    {
+        "Fecha":  "2026-08-22",
+        "Agencia":  "SAN ANTONIO",
+        "Completadas":  331,
+        "Canceladas":  150,
+        "Base":  481,
+        "Tasa":  68.81
+    },
+    {
+        "Fecha":  "2026-08-22",
+        "Agencia":  "TOTAL",
+        "Completadas":  2840,
+        "Canceladas":  1099,
+        "Base":  3939,
+        "Tasa":  72.1
+    },
+    {
+        "Fecha":  "2026-08-22",
+        "Agencia":  "VALPARAISO",
+        "Completadas":  917,
+        "Canceladas":  426,
+        "Base":  1343,
+        "Tasa":  68.28
+    },
+    {
+        "Fecha":  "2026-08-22",
+        "Agencia":  "VINA DEL MAR",
+        "Completadas":  1592,
+        "Canceladas":  523,
+        "Base":  2115,
+        "Tasa":  75.27
     }
 ]}
