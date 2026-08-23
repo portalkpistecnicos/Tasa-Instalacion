@@ -373,9 +373,16 @@ async function cargar() {
   function pintarTabla(filtroFecha) {
     const tbody = document.getElementById('tablaDetalle');
     tbody.innerHTML = '';
-    const filas = filtroFecha === 'todas'
-      ? [...registros].sort((a, b) => (a.Fecha < b.Fecha ? 1 : -1))
-      : registros.filter(r => r.Fecha === filtroFecha);
+    const ordenarConTotalAlFinal = (a, b) => {
+      if (a.Fecha !== b.Fecha) return a.Fecha < b.Fecha ? 1 : -1;
+      if (a.Agencia === 'TOTAL') return 1;
+      if (b.Agencia === 'TOTAL') return -1;
+      return a.Agencia.localeCompare(b.Agencia);
+    };
+    const filas = (filtroFecha === 'todas'
+      ? [...registros]
+      : registros.filter(r => r.Fecha === filtroFecha)
+    ).sort(ordenarConTotalAlFinal);
     filas.forEach(r => {
       const tr = document.createElement('tr');
       if (r.Agencia === 'TOTAL') tr.className = 'total-row';
