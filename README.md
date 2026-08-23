@@ -11,5 +11,5 @@ Este repositorio solo contiene datos **agregados** (conteos y tasas). No incluye
 personal de clientes ni las bases crudas de origen.
 
 Se actualiza con el script `Actualizar_Tasa_Instalacion.ps1` ubicado en la carpeta local
-`TASA DE INSTALACIÓN`, que lee el último archivo TOA de `BBDD`, recalcula las tasas y publica
+`KPI's\Tasa de Instalación`, que lee el último archivo TOA de `BBDD`, recalcula las tasas y publica
 los cambios aquí.

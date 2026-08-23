@@ -34,33 +34,33 @@
     {
         "Fecha":  "2026-08-22",
         "Agencia":  "SAN ANTONIO",
-        "Completadas":  331,
-        "Canceladas":  150,
-        "Base":  481,
-        "Tasa":  68.81
+        "Completadas":  361,
+        "Canceladas":  160,
+        "Base":  521,
+        "Tasa":  69.29
     },
     {
         "Fecha":  "2026-08-22",
         "Agencia":  "TOTAL",
-        "Completadas":  2840,
-        "Canceladas":  1099,
-        "Base":  3939,
-        "Tasa":  72.1
+        "Completadas":  3090,
+        "Canceladas":  1172,
+        "Base":  4262,
+        "Tasa":  72.5
     },
     {
         "Fecha":  "2026-08-22",
         "Agencia":  "VALPARAISO",
-        "Completadas":  917,
-        "Canceladas":  426,
-        "Base":  1343,
-        "Tasa":  68.28
+        "Completadas":  996,
+        "Canceladas":  452,
+        "Base":  1448,
+        "Tasa":  68.78
     },
     {
         "Fecha":  "2026-08-22",
         "Agencia":  "VINA DEL MAR",
-        "Completadas":  1592,
-        "Canceladas":  523,
-        "Base":  2115,
-        "Tasa":  75.27
+        "Completadas":  1733,
+        "Canceladas":  560,
+        "Base":  2293,
+        "Tasa":  75.58
     }
 ]}
