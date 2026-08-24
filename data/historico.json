@@ -1,4 +1,4 @@
-﻿{"meta": 80.7, "actualizado": "2026-08-23", "registros": [
+﻿{"meta": 80.7, "actualizado": "2026-08-24", "registros": [
     {
         "Fecha":  "2026-08-20",
         "Agencia":  "SAN ANTONIO",
@@ -66,33 +66,65 @@
     {
         "Fecha":  "2026-08-23",
         "Agencia":  "SAN ANTONIO",
+        "Completadas":  "382",
+        "Canceladas":  "170",
+        "Base":  "552",
+        "Tasa":  "69,2"
+    },
+    {
+        "Fecha":  "2026-08-23",
+        "Agencia":  "TOTAL",
+        "Completadas":  "3275",
+        "Canceladas":  "1226",
+        "Base":  "4501",
+        "Tasa":  "72,76"
+    },
+    {
+        "Fecha":  "2026-08-23",
+        "Agencia":  "VALPARAISO",
+        "Completadas":  "1043",
+        "Canceladas":  "470",
+        "Base":  "1513",
+        "Tasa":  "68,94"
+    },
+    {
+        "Fecha":  "2026-08-23",
+        "Agencia":  "VINA DEL MAR",
+        "Completadas":  "1850",
+        "Canceladas":  "586",
+        "Base":  "2436",
+        "Tasa":  "75,94"
+    },
+    {
+        "Fecha":  "2026-08-24",
+        "Agencia":  "SAN ANTONIO",
         "Completadas":  382,
         "Canceladas":  170,
         "Base":  552,
         "Tasa":  69.2
     },
     {
-        "Fecha":  "2026-08-23",
+        "Fecha":  "2026-08-24",
         "Agencia":  "TOTAL",
-        "Completadas":  3275,
+        "Completadas":  3293,
         "Canceladas":  1226,
-        "Base":  4501,
-        "Tasa":  72.76
+        "Base":  4519,
+        "Tasa":  72.87
     },
     {
-        "Fecha":  "2026-08-23",
+        "Fecha":  "2026-08-24",
         "Agencia":  "VALPARAISO",
-        "Completadas":  1043,
+        "Completadas":  1051,
         "Canceladas":  470,
-        "Base":  1513,
-        "Tasa":  68.94
+        "Base":  1521,
+        "Tasa":  69.1
     },
     {
-        "Fecha":  "2026-08-23",
+        "Fecha":  "2026-08-24",
         "Agencia":  "VINA DEL MAR",
-        "Completadas":  1850,
+        "Completadas":  1860,
         "Canceladas":  586,
-        "Base":  2436,
-        "Tasa":  75.94
+        "Base":  2446,
+        "Tasa":  76.04
     }
 ]}
