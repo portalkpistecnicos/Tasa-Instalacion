@@ -1,130 +1,38 @@
 ﻿{"meta": 80.7, "actualizado": "2026-08-24", "registros": [
     {
-        "Fecha":  "2026-08-20",
-        "Agencia":  "SAN ANTONIO",
-        "Completadas":  "307",
-        "Canceladas":  "142",
-        "Base":  "449",
-        "Tasa":  "68,37"
-    },
-    {
-        "Fecha":  "2026-08-20",
-        "Agencia":  "TOTAL",
-        "Completadas":  "2595",
-        "Canceladas":  "1023",
-        "Base":  "3618",
-        "Tasa":  "71,72"
-    },
-    {
-        "Fecha":  "2026-08-20",
-        "Agencia":  "VALPARAISO",
-        "Completadas":  "833",
-        "Canceladas":  "394",
-        "Base":  "1227",
-        "Tasa":  "67,89"
-    },
-    {
-        "Fecha":  "2026-08-20",
-        "Agencia":  "VINA DEL MAR",
-        "Completadas":  "1455",
-        "Canceladas":  "487",
-        "Base":  "1942",
-        "Tasa":  "74,92"
-    },
-    {
-        "Fecha":  "2026-08-22",
-        "Agencia":  "SAN ANTONIO",
-        "Completadas":  "361",
-        "Canceladas":  "160",
-        "Base":  "521",
-        "Tasa":  "69,29"
-    },
-    {
-        "Fecha":  "2026-08-22",
-        "Agencia":  "TOTAL",
-        "Completadas":  "3090",
-        "Canceladas":  "1172",
-        "Base":  "4262",
-        "Tasa":  "72,5"
-    },
-    {
-        "Fecha":  "2026-08-22",
-        "Agencia":  "VALPARAISO",
-        "Completadas":  "996",
-        "Canceladas":  "452",
-        "Base":  "1448",
-        "Tasa":  "68,78"
-    },
-    {
-        "Fecha":  "2026-08-22",
-        "Agencia":  "VINA DEL MAR",
-        "Completadas":  "1733",
-        "Canceladas":  "560",
-        "Base":  "2293",
-        "Tasa":  "75,58"
-    },
-    {
-        "Fecha":  "2026-08-23",
-        "Agencia":  "SAN ANTONIO",
-        "Completadas":  "382",
-        "Canceladas":  "170",
-        "Base":  "552",
-        "Tasa":  "69,2"
-    },
-    {
-        "Fecha":  "2026-08-23",
-        "Agencia":  "TOTAL",
-        "Completadas":  "3275",
-        "Canceladas":  "1226",
-        "Base":  "4501",
-        "Tasa":  "72,76"
-    },
-    {
-        "Fecha":  "2026-08-23",
-        "Agencia":  "VALPARAISO",
-        "Completadas":  "1043",
-        "Canceladas":  "470",
-        "Base":  "1513",
-        "Tasa":  "68,94"
-    },
-    {
-        "Fecha":  "2026-08-23",
-        "Agencia":  "VINA DEL MAR",
-        "Completadas":  "1850",
-        "Canceladas":  "586",
-        "Base":  "2436",
-        "Tasa":  "75,94"
-    },
-    {
         "Fecha":  "2026-08-24",
         "Agencia":  "SAN ANTONIO",
-        "Completadas":  382,
-        "Canceladas":  170,
-        "Base":  552,
-        "Tasa":  69.2
+        "Numerador":  251,
+        "Emision":  250,
+        "Cancelada":  32,
+        "Denominador":  218,
+        "Tasa":  115.14
     },
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "TOTAL",
-        "Completadas":  3293,
-        "Canceladas":  1226,
-        "Base":  4519,
-        "Tasa":  72.87
+        "Numerador":  1838,
+        "Emision":  2322,
+        "Cancelada":  243,
+        "Denominador":  2079,
+        "Tasa":  88.41
     },
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "VALPARAISO",
-        "Completadas":  1051,
-        "Canceladas":  470,
-        "Base":  1521,
-        "Tasa":  69.1
+        "Numerador":  550,
+        "Emision":  775,
+        "Cancelada":  87,
+        "Denominador":  688,
+        "Tasa":  79.94
     },
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "VINA DEL MAR",
-        "Completadas":  1860,
-        "Canceladas":  586,
-        "Base":  2446,
-        "Tasa":  76.04
+        "Numerador":  1037,
+        "Emision":  1297,
+        "Cancelada":  124,
+        "Denominador":  1173,
+        "Tasa":  88.41
     }
 ]}

@@ -61,6 +61,7 @@
   .hero-figure .valor.good { color: var(--good); }
   .hero-figure .valor.warning { color: #b8790a; }
   .hero-figure .valor.critical { color: var(--critical); }
+  .hero-figure .valor.info { color: #4a3aa7; }
   .hero-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--texto-muted); margin-bottom: 6px; }
   .hero-status {
     display: inline-flex; align-items: center; gap: 6px;
@@ -215,7 +216,7 @@
       <div class="tabla-scroll">
         <table>
           <thead>
-            <tr><th>Fecha</th><th>Agencia</th><th>Terminadas (emitidas mes)</th><th>Canceladas (emitidas mes)</th><th>Base</th><th>Tasa</th></tr>
+            <tr><th>Fecha</th><th>Agencia</th><th>Instalaciones BAF</th><th>Emisión</th><th>Cancelada</th><th>Órdenes netas</th><th>Tasa</th></tr>
           </thead>
           <tbody id="tablaDetalle"></tbody>
         </table>
@@ -224,15 +225,16 @@
   </div>
 </main>
 
-<footer>Fórmula: Terminadas (emitidas mes) / (Terminadas + Canceladas, ambas emitidas mes) · Fuente: TOA ELECNOR</footer>
+<footer>Fórmula: Instalaciones BAF completadas (TOA) / [Emisión − Cancelada] (Maestro de Ventas), por agencia · Meta 80,70%</footer>
 
 <script>
 const COLOR_GOOD = '#0ca30c';
 const COLOR_WARNING = '#fab219';
 const COLOR_CRITICAL = '#d03b3b';
-const COLOR_WARNING_TEXT = '#b8790a';
+const COLOR_INFO = '#4a3aa7';
 
 function estadoDe(tasa, meta) {
+  if (tasa >= 100) return { label: 'Verificar dato', color: COLOR_INFO, clase: 'info' };
   if (tasa >= meta) return { label: 'Cumple meta', color: COLOR_GOOD, clase: 'good' };
   if (tasa >= meta - 5) return { label: 'Cerca de meta', color: COLOR_WARNING, clase: 'warning' };
   return { label: 'Crítico', color: COLOR_CRITICAL, clase: 'critical' };
@@ -270,8 +272,10 @@ async function cargar() {
     const gap = (tasaTotal - meta);
     const mejor = agencias[0];
     const peor = agencias[agencias.length - 1];
-    let narrativa = `Brecha de ${gap >= 0 ? '+' : ''}${fmt(gap)} pp frente a la meta general (${total.Completadas} terminadas de ${total.Base} emitidas este mes). `;
-    if (gap >= 0) {
+    let narrativa = `Brecha de ${gap >= 0 ? '+' : ''}${fmt(gap)} pp frente a la meta general (${total.Numerador} instalaciones BAF completadas de ${total.Denominador} órdenes netas vendidas este mes). `;
+    if (tasaTotal >= 100) {
+      narrativa += `El valor supera el 100%, lo que indica un posible desfase temporal entre el TOA y el Maestro de Ventas — validar por número de orden antes de reportar.`;
+    } else if (gap >= 0) {
       narrativa += `Las tres agencias sostienen el resultado.`;
     } else {
       narrativa += `${mejor.Agencia} es la más cercana a la meta (${fmt(parseFloat(mejor.Tasa))}%); ${peor.Agencia} requiere atención prioritaria (${fmt(parseFloat(peor.Tasa))}%).`;
@@ -301,7 +305,7 @@ async function cargar() {
         <div class="meter-fill" style="width:${fillPct}%; background:${est.color};"></div>
         <div class="meter-meta-mark" style="left:${metaPct}%;"></div>
       </div>
-      <div class="meter-caption"><span>${r.Completadas} terminadas</span><span>${r.Base} base</span></div>`;
+      <div class="meter-caption"><span>${r.Numerador} instalaciones BAF</span><span>${r.Denominador} órdenes netas</span></div>`;
     cardsEl.appendChild(div);
   });
 
@@ -386,7 +390,7 @@ async function cargar() {
     filas.forEach(r => {
       const tr = document.createElement('tr');
       if (r.Agencia === 'TOTAL') tr.className = 'total-row';
-      tr.innerHTML = `<td>${r.Fecha}</td><td>${r.Agencia}</td><td>${r.Completadas}</td><td>${r.Canceladas}</td><td>${r.Base}</td><td>${fmt(parseFloat(r.Tasa))}%</td>`;
+      tr.innerHTML = `<td>${r.Fecha}</td><td>${r.Agencia}</td><td>${r.Numerador}</td><td>${r.Emision}</td><td>${r.Cancelada}</td><td>${r.Denominador}</td><td>${fmt(parseFloat(r.Tasa))}%</td>`;
       tbody.appendChild(tr);
     });
   }
