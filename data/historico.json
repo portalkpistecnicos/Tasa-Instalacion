@@ -6,7 +6,9 @@
         "Emision":  250,
         "Cancelada":  32,
         "Denominador":  218,
-        "Tasa":  115.14
+        "Tasa":  115.14,
+        "CanceladasBAF":  89,
+        "TasaOperativa":  73.82
     },
     {
         "Fecha":  "2026-08-24",
@@ -15,7 +17,9 @@
         "Emision":  2322,
         "Cancelada":  243,
         "Denominador":  2079,
-        "Tasa":  88.41
+        "Tasa":  88.41,
+        "CanceladasBAF":  498,
+        "TasaOperativa":  78.68
     },
     {
         "Fecha":  "2026-08-24",
@@ -24,7 +28,9 @@
         "Emision":  775,
         "Cancelada":  87,
         "Denominador":  688,
-        "Tasa":  79.94
+        "Tasa":  79.94,
+        "CanceladasBAF":  191,
+        "TasaOperativa":  74.22
     },
     {
         "Fecha":  "2026-08-24",
@@ -33,6 +39,8 @@
         "Emision":  1297,
         "Cancelada":  124,
         "Denominador":  1173,
-        "Tasa":  88.41
+        "Tasa":  88.41,
+        "CanceladasBAF":  218,
+        "TasaOperativa":  82.63
     }
 ]}
