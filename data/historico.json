@@ -1,38 +1,74 @@
-﻿{"meta": 80.7, "actualizado": "2026-08-24", "registros": [
+﻿{"meta": 80.7, "actualizado": "2026-08-26", "registros": [
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "SAN ANTONIO",
-        "Numerador":  251,
-        "Emision":  250,
-        "Cancelada":  32,
-        "Denominador":  218,
-        "Tasa":  115.14
+        "Numerador":  "251",
+        "Emision":  "250",
+        "Cancelada":  "32",
+        "Denominador":  "218",
+        "Tasa":  "115,14"
     },
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "TOTAL",
-        "Numerador":  1838,
-        "Emision":  2322,
-        "Cancelada":  243,
-        "Denominador":  2079,
-        "Tasa":  88.41
+        "Numerador":  "1838",
+        "Emision":  "2322",
+        "Cancelada":  "243",
+        "Denominador":  "2079",
+        "Tasa":  "88,41"
     },
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "VALPARAISO",
-        "Numerador":  550,
-        "Emision":  775,
-        "Cancelada":  87,
-        "Denominador":  688,
-        "Tasa":  79.94
+        "Numerador":  "550",
+        "Emision":  "775",
+        "Cancelada":  "87",
+        "Denominador":  "688",
+        "Tasa":  "79,94"
     },
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "VINA DEL MAR",
-        "Numerador":  1037,
-        "Emision":  1297,
-        "Cancelada":  124,
-        "Denominador":  1173,
-        "Tasa":  88.41
+        "Numerador":  "1037",
+        "Emision":  "1297",
+        "Cancelada":  "124",
+        "Denominador":  "1173",
+        "Tasa":  "88,41"
+    },
+    {
+        "Fecha":  "2026-08-26",
+        "Agencia":  "SAN ANTONIO",
+        "Numerador":  270,
+        "Emision":  335,
+        "Cancelada":  39,
+        "Denominador":  296,
+        "Tasa":  91.22
+    },
+    {
+        "Fecha":  "2026-08-26",
+        "Agencia":  "TOTAL",
+        "Numerador":  2023,
+        "Emision":  3102,
+        "Cancelada":  323,
+        "Denominador":  2779,
+        "Tasa":  72.8
+    },
+    {
+        "Fecha":  "2026-08-26",
+        "Agencia":  "VALPARAISO",
+        "Numerador":  606,
+        "Emision":  1015,
+        "Cancelada":  114,
+        "Denominador":  901,
+        "Tasa":  67.26
+    },
+    {
+        "Fecha":  "2026-08-26",
+        "Agencia":  "VINA DEL MAR",
+        "Numerador":  1147,
+        "Emision":  1752,
+        "Cancelada":  170,
+        "Denominador":  1582,
+        "Tasa":  72.5
     }
 ]}
