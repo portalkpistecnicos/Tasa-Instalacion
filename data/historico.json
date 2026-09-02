@@ -1,4 +1,4 @@
-﻿{"meta": 80.7, "actualizado": "2026-09-02", "registros": [
+﻿{"meta": 80.7, "actualizado": "2026-09-01", "registros": [
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "SAN ANTONIO",
@@ -286,41 +286,5 @@
         "Cancelada":  "204",
         "Denominador":  "1957",
         "Tasa":  "73,89"
-    },
-    {
-        "Fecha":  "2026-09-02",
-        "Agencia":  "SAN ANTONIO",
-        "Numerador":  9,
-        "Emision":  396,
-        "Cancelada":  45,
-        "Denominador":  351,
-        "Tasa":  2.56
-    },
-    {
-        "Fecha":  "2026-09-02",
-        "Agencia":  "TOTAL",
-        "Numerador":  111,
-        "Emision":  3842,
-        "Cancelada":  392,
-        "Denominador":  3450,
-        "Tasa":  3.22
-    },
-    {
-        "Fecha":  "2026-09-02",
-        "Agencia":  "VALPARAISO",
-        "Numerador":  38,
-        "Emision":  1285,
-        "Cancelada":  143,
-        "Denominador":  1142,
-        "Tasa":  3.33
-    },
-    {
-        "Fecha":  "2026-09-02",
-        "Agencia":  "VINA DEL MAR",
-        "Numerador":  64,
-        "Emision":  2161,
-        "Cancelada":  204,
-        "Denominador":  1957,
-        "Tasa":  3.27
     }
 ]}
