@@ -294,7 +294,9 @@
         "Emision":  13,
         "Cancelada":  0,
         "Denominador":  13,
-        "Tasa":  "153.85"
+        "Tasa":  "153.85",
+        "CanceladasBAF":  6,
+        "TasaOperativa":  "76.92"
     },
     {
         "Fecha":  "2026-09-03",
@@ -303,7 +305,9 @@
         "Emision":  233,
         "Cancelada":  10,
         "Denominador":  223,
-        "Tasa":  "98.21"
+        "Tasa":  "98.21",
+        "CanceladasBAF":  58,
+        "TasaOperativa":  "79.06"
     },
     {
         "Fecha":  "2026-09-03",
@@ -312,7 +316,9 @@
         "Emision":  137,
         "Cancelada":  4,
         "Denominador":  133,
-        "Tasa":  "51.88"
+        "Tasa":  "51.88",
+        "CanceladasBAF":  22,
+        "TasaOperativa":  "75.82"
     },
     {
         "Fecha":  "2026-09-03",
@@ -321,6 +327,8 @@
         "Emision":  83,
         "Cancelada":  6,
         "Denominador":  77,
-        "Tasa":  "168.83"
+        "Tasa":  "168.83",
+        "CanceladasBAF":  30,
+        "TasaOperativa":  "81.25"
     }
 ]}

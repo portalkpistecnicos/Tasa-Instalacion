@@ -200,6 +200,19 @@
   <div class="cards" id="cards"></div>
 
   <div class="panel">
+    <h2>Métrica operativa: Tasa TOA (solo instalaciones)</h2>
+    <div class="subt">Terminadas / (Terminadas + Canceladas) — ambas filtradas a productos BAF en el TOA, sin cruzar con el Maestro de Ventas. Complementa a la tasa oficial de arriba.</div>
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr><th>Agencia</th><th>Terminadas</th><th>Canceladas</th><th>Base</th><th>Tasa operativa</th></tr>
+        </thead>
+        <tbody id="tablaOperativa"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel">
     <h2>Evolución diaria</h2>
     <div class="subt">Tasa de instalación por agencia frente a la meta</div>
     <canvas id="grafico" height="90"></canvas>
@@ -310,6 +323,19 @@ async function cargar() {
       </div>
       <div class="meter-caption"><span>${r.Numerador} instalaciones BAF</span><span>${r.Denominador} órdenes netas</span></div>`;
     cardsEl.appendChild(div);
+  });
+
+  // Metrica operativa adicional (solo TOA, sin cruzar con Maestro).
+  // Los registros historicos anteriores a esta metrica no traen estos campos;
+  // se filtran para no mostrar filas en blanco.
+  const tbodyOperativa = document.getElementById('tablaOperativa');
+  tbodyOperativa.innerHTML = '';
+  [...agencias, total].filter(r => r && r.CanceladasBAF !== undefined).forEach(r => {
+    const baseOp = Number(r.Numerador) + Number(r.CanceladasBAF);
+    const tr = document.createElement('tr');
+    if (r.Agencia === 'TOTAL') tr.className = 'total-row';
+    tr.innerHTML = `<td>${r.Agencia}</td><td>${r.Numerador}</td><td>${r.CanceladasBAF}</td><td>${baseOp}</td><td>${fmt(parseFloat(r.TasaOperativa))}%</td>`;
+    tbodyOperativa.appendChild(tr);
   });
 
   // Grafico: TOTAL en enfasis (naranja), agencias en gris
