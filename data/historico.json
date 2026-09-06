@@ -1,12 +1,12 @@
-﻿{"meta": 80.7, "actualizado": "2026-09-05", "registros": [
+﻿{"meta": 80.7, "actualizado": "2026-09-06", "registros": [
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "SAN ANTONIO",
         "Numerador":  "251",
         "Emision":  "250",
         "Cancelada":  "32",
-        "Denominador":  "218",
-        "Tasa":  "115.14"
+        "Denominador":  "283",
+        "Tasa":  "88.69"
     },
     {
         "Fecha":  "2026-08-24",
@@ -14,8 +14,8 @@
         "Numerador":  "1838",
         "Emision":  "2322",
         "Cancelada":  "243",
-        "Denominador":  "2079",
-        "Tasa":  "88.41"
+        "Denominador":  "2081",
+        "Tasa":  "88.32"
     },
     {
         "Fecha":  "2026-08-24",
@@ -23,8 +23,8 @@
         "Numerador":  "550",
         "Emision":  "775",
         "Cancelada":  "87",
-        "Denominador":  "688",
-        "Tasa":  "79.94"
+        "Denominador":  "637",
+        "Tasa":  "86.34"
     },
     {
         "Fecha":  "2026-08-24",
@@ -32,8 +32,8 @@
         "Numerador":  "1037",
         "Emision":  "1297",
         "Cancelada":  "124",
-        "Denominador":  "1173",
-        "Tasa":  "88.41"
+        "Denominador":  "1161",
+        "Tasa":  "89.32"
     },
     {
         "Fecha":  "2026-08-26",
@@ -41,8 +41,8 @@
         "Numerador":  "270",
         "Emision":  "335",
         "Cancelada":  "39",
-        "Denominador":  "296",
-        "Tasa":  "91.22"
+        "Denominador":  "309",
+        "Tasa":  "87.38"
     },
     {
         "Fecha":  "2026-08-26",
@@ -50,8 +50,8 @@
         "Numerador":  "2023",
         "Emision":  "3102",
         "Cancelada":  "323",
-        "Denominador":  "2779",
-        "Tasa":  "72.80"
+        "Denominador":  "2346",
+        "Tasa":  "86.23"
     },
     {
         "Fecha":  "2026-08-26",
@@ -59,8 +59,8 @@
         "Numerador":  "606",
         "Emision":  "1015",
         "Cancelada":  "114",
-        "Denominador":  "901",
-        "Tasa":  "67.26"
+        "Denominador":  "720",
+        "Tasa":  "84.17"
     },
     {
         "Fecha":  "2026-08-26",
@@ -68,8 +68,8 @@
         "Numerador":  "1147",
         "Emision":  "1752",
         "Cancelada":  "170",
-        "Denominador":  "1582",
-        "Tasa":  "72.50"
+        "Denominador":  "1317",
+        "Tasa":  "87.09"
     },
     {
         "Fecha":  "2026-08-27",
@@ -77,8 +77,8 @@
         "Numerador":  "281",
         "Emision":  "335",
         "Cancelada":  "39",
-        "Denominador":  "296",
-        "Tasa":  "94.93"
+        "Denominador":  "320",
+        "Tasa":  "87.81"
     },
     {
         "Fecha":  "2026-08-27",
@@ -86,8 +86,8 @@
         "Numerador":  "2126",
         "Emision":  "3102",
         "Cancelada":  "323",
-        "Denominador":  "2779",
-        "Tasa":  "76.50"
+        "Denominador":  "2449",
+        "Tasa":  "86.81"
     },
     {
         "Fecha":  "2026-08-27",
@@ -95,8 +95,8 @@
         "Numerador":  "642",
         "Emision":  "1015",
         "Cancelada":  "114",
-        "Denominador":  "901",
-        "Tasa":  "71.25"
+        "Denominador":  "756",
+        "Tasa":  "84.92"
     },
     {
         "Fecha":  "2026-08-27",
@@ -104,8 +104,8 @@
         "Numerador":  "1203",
         "Emision":  "1752",
         "Cancelada":  "170",
-        "Denominador":  "1582",
-        "Tasa":  "76.04"
+        "Denominador":  "1373",
+        "Tasa":  "87.62"
     },
     {
         "Fecha":  "2026-08-28",
@@ -113,8 +113,8 @@
         "Numerador":  "294",
         "Emision":  "335",
         "Cancelada":  "39",
-        "Denominador":  "296",
-        "Tasa":  "99.32"
+        "Denominador":  "333",
+        "Tasa":  "88.29"
     },
     {
         "Fecha":  "2026-08-28",
@@ -122,8 +122,8 @@
         "Numerador":  "2235",
         "Emision":  "3102",
         "Cancelada":  "323",
-        "Denominador":  "2779",
-        "Tasa":  "80.42"
+        "Denominador":  "2558",
+        "Tasa":  "87.37"
     },
     {
         "Fecha":  "2026-08-28",
@@ -131,8 +131,8 @@
         "Numerador":  "683",
         "Emision":  "1015",
         "Cancelada":  "114",
-        "Denominador":  "901",
-        "Tasa":  "75.80"
+        "Denominador":  "797",
+        "Tasa":  "85.70"
     },
     {
         "Fecha":  "2026-08-28",
@@ -140,8 +140,8 @@
         "Numerador":  "1258",
         "Emision":  "1752",
         "Cancelada":  "170",
-        "Denominador":  "1582",
-        "Tasa":  "79.52"
+        "Denominador":  "1428",
+        "Tasa":  "88.10"
     },
     {
         "Fecha":  "2026-08-29",
@@ -149,8 +149,8 @@
         "Numerador":  "304",
         "Emision":  "335",
         "Cancelada":  "39",
-        "Denominador":  "296",
-        "Tasa":  "102.70"
+        "Denominador":  "343",
+        "Tasa":  "88.63"
     },
     {
         "Fecha":  "2026-08-29",
@@ -158,8 +158,8 @@
         "Numerador":  "2346",
         "Emision":  "3102",
         "Cancelada":  "323",
-        "Denominador":  "2779",
-        "Tasa":  "84.42"
+        "Denominador":  "2669",
+        "Tasa":  "87.90"
     },
     {
         "Fecha":  "2026-08-29",
@@ -167,8 +167,8 @@
         "Numerador":  "725",
         "Emision":  "1015",
         "Cancelada":  "114",
-        "Denominador":  "901",
-        "Tasa":  "80.47"
+        "Denominador":  "839",
+        "Tasa":  "86.41"
     },
     {
         "Fecha":  "2026-08-29",
@@ -176,8 +176,8 @@
         "Numerador":  "1317",
         "Emision":  "1752",
         "Cancelada":  "170",
-        "Denominador":  "1582",
-        "Tasa":  "83.25"
+        "Denominador":  "1487",
+        "Tasa":  "88.57"
     },
     {
         "Fecha":  "2026-08-30",
@@ -185,8 +185,8 @@
         "Numerador":  "304",
         "Emision":  "335",
         "Cancelada":  "39",
-        "Denominador":  "296",
-        "Tasa":  "102.70"
+        "Denominador":  "343",
+        "Tasa":  "88.63"
     },
     {
         "Fecha":  "2026-08-30",
@@ -194,8 +194,8 @@
         "Numerador":  "2346",
         "Emision":  "3102",
         "Cancelada":  "323",
-        "Denominador":  "2779",
-        "Tasa":  "84.42"
+        "Denominador":  "2669",
+        "Tasa":  "87.90"
     },
     {
         "Fecha":  "2026-08-30",
@@ -203,8 +203,8 @@
         "Numerador":  "725",
         "Emision":  "1015",
         "Cancelada":  "114",
-        "Denominador":  "901",
-        "Tasa":  "80.47"
+        "Denominador":  "839",
+        "Tasa":  "86.41"
     },
     {
         "Fecha":  "2026-08-30",
@@ -212,8 +212,8 @@
         "Numerador":  "1317",
         "Emision":  "1752",
         "Cancelada":  "170",
-        "Denominador":  "1582",
-        "Tasa":  "83.25"
+        "Denominador":  "1487",
+        "Tasa":  "88.57"
     },
     {
         "Fecha":  "2026-08-31",
@@ -221,8 +221,8 @@
         "Numerador":  "316",
         "Emision":  "335",
         "Cancelada":  "39",
-        "Denominador":  "296",
-        "Tasa":  "106.76"
+        "Denominador":  "355",
+        "Tasa":  "89.01"
     },
     {
         "Fecha":  "2026-08-31",
@@ -230,8 +230,8 @@
         "Numerador":  "2447",
         "Emision":  "3102",
         "Cancelada":  "323",
-        "Denominador":  "2779",
-        "Tasa":  "88.05"
+        "Denominador":  "2770",
+        "Tasa":  "88.34"
     },
     {
         "Fecha":  "2026-08-31",
@@ -239,8 +239,8 @@
         "Numerador":  "757",
         "Emision":  "1015",
         "Cancelada":  "114",
-        "Denominador":  "901",
-        "Tasa":  "84.02"
+        "Denominador":  "871",
+        "Tasa":  "86.91"
     },
     {
         "Fecha":  "2026-08-31",
@@ -248,8 +248,8 @@
         "Numerador":  "1374",
         "Emision":  "1752",
         "Cancelada":  "170",
-        "Denominador":  "1582",
-        "Tasa":  "86.85"
+        "Denominador":  "1544",
+        "Tasa":  "88.99"
     },
     {
         "Fecha":  "2026-09-01",
@@ -257,8 +257,8 @@
         "Numerador":  "327",
         "Emision":  "396",
         "Cancelada":  "45",
-        "Denominador":  "351",
-        "Tasa":  "93.16"
+        "Denominador":  "372",
+        "Tasa":  "87.90"
     },
     {
         "Fecha":  "2026-09-01",
@@ -266,8 +266,8 @@
         "Numerador":  "2568",
         "Emision":  "3842",
         "Cancelada":  "392",
-        "Denominador":  "3450",
-        "Tasa":  "74.43"
+        "Denominador":  "2960",
+        "Tasa":  "86.76"
     },
     {
         "Fecha":  "2026-09-01",
@@ -275,8 +275,8 @@
         "Numerador":  "795",
         "Emision":  "1285",
         "Cancelada":  "143",
-        "Denominador":  "1142",
-        "Tasa":  "69.61"
+        "Denominador":  "938",
+        "Tasa":  "84.75"
     },
     {
         "Fecha":  "2026-09-01",
@@ -284,8 +284,8 @@
         "Numerador":  "1446",
         "Emision":  "2161",
         "Cancelada":  "204",
-        "Denominador":  "1957",
-        "Tasa":  "73.89"
+        "Denominador":  "1650",
+        "Tasa":  "87.64"
     },
     {
         "Fecha":  "2026-09-03",
@@ -293,8 +293,8 @@
         "Numerador":  "20",
         "Emision":  "13",
         "Cancelada":  "0",
-        "Denominador":  "13",
-        "Tasa":  "153.85"
+        "Denominador":  "20",
+        "Tasa":  "100.00"
     },
     {
         "Fecha":  "2026-09-03",
@@ -302,8 +302,8 @@
         "Numerador":  "219",
         "Emision":  "233",
         "Cancelada":  "10",
-        "Denominador":  "223",
-        "Tasa":  "98.21"
+        "Denominador":  "229",
+        "Tasa":  "95.63"
     },
     {
         "Fecha":  "2026-09-03",
@@ -311,8 +311,8 @@
         "Numerador":  "69",
         "Emision":  "137",
         "Cancelada":  "4",
-        "Denominador":  "133",
-        "Tasa":  "51.88"
+        "Denominador":  "73",
+        "Tasa":  "94.52"
     },
     {
         "Fecha":  "2026-09-03",
@@ -320,8 +320,8 @@
         "Numerador":  "130",
         "Emision":  "83",
         "Cancelada":  "6",
-        "Denominador":  "77",
-        "Tasa":  "168.83"
+        "Denominador":  "136",
+        "Tasa":  "95.59"
     },
     {
         "Fecha":  "2026-09-04",
@@ -329,8 +329,8 @@
         "Numerador":  "20",
         "Emision":  "13",
         "Cancelada":  "0",
-        "Denominador":  "13",
-        "Tasa":  "153.85"
+        "Denominador":  "20",
+        "Tasa":  "100.00"
     },
     {
         "Fecha":  "2026-09-04",
@@ -338,8 +338,8 @@
         "Numerador":  "219",
         "Emision":  "233",
         "Cancelada":  "10",
-        "Denominador":  "223",
-        "Tasa":  "98.21"
+        "Denominador":  "229",
+        "Tasa":  "95.63"
     },
     {
         "Fecha":  "2026-09-04",
@@ -347,8 +347,8 @@
         "Numerador":  "69",
         "Emision":  "137",
         "Cancelada":  "4",
-        "Denominador":  "133",
-        "Tasa":  "51.88"
+        "Denominador":  "73",
+        "Tasa":  "94.52"
     },
     {
         "Fecha":  "2026-09-04",
@@ -356,51 +356,43 @@
         "Numerador":  "130",
         "Emision":  "83",
         "Cancelada":  "6",
-        "Denominador":  "77",
-        "Tasa":  "168.83"
+        "Denominador":  "136",
+        "Tasa":  "95.59"
     },
     {
         "Fecha":  "2026-09-05",
         "Agencia":  "SAN ANTONIO",
-        "Numerador":  40,
-        "Emision":  31,
-        "Cancelada":  null,
-        "Denominador":  31,
-        "Tasa":  "129.03",
-        "CanceladasBAF":  10,
-        "TasaOperativa":  "80.00"
+        "Numerador":  "40",
+        "Emision":  "31",
+        "Cancelada":  "0",
+        "Denominador":  "40",
+        "Tasa":  "100.00"
     },
     {
         "Fecha":  "2026-09-05",
         "Agencia":  "TOTAL",
-        "Numerador":  448,
-        "Emision":  411,
-        "Cancelada":  18,
-        "Denominador":  393,
-        "Tasa":  "113.99",
-        "CanceladasBAF":  105,
-        "TasaOperativa":  "81.01"
+        "Numerador":  "448",
+        "Emision":  "411",
+        "Cancelada":  "18",
+        "Denominador":  "466",
+        "Tasa":  "96.14"
     },
     {
         "Fecha":  "2026-09-05",
         "Agencia":  "VALPARAISO",
-        "Numerador":  153,
-        "Emision":  198,
-        "Cancelada":  4,
-        "Denominador":  194,
-        "Tasa":  "78.87",
-        "CanceladasBAF":  35,
-        "TasaOperativa":  "81.38"
+        "Numerador":  "153",
+        "Emision":  "198",
+        "Cancelada":  "4",
+        "Denominador":  "157",
+        "Tasa":  "97.45"
     },
     {
         "Fecha":  "2026-09-05",
         "Agencia":  "VINA DEL MAR",
-        "Numerador":  255,
-        "Emision":  182,
-        "Cancelada":  14,
-        "Denominador":  168,
-        "Tasa":  "151.79",
-        "CanceladasBAF":  60,
-        "TasaOperativa":  "80.95"
+        "Numerador":  "255",
+        "Emision":  "182",
+        "Cancelada":  "14",
+        "Denominador":  "269",
+        "Tasa":  "94.80"
     }
 ]}
