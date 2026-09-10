@@ -1,4 +1,4 @@
-﻿{"meta": 80.7, "actualizado": "2026-09-09", "registros": [
+﻿{"meta": 80.7, "actualizado": "2026-09-10", "registros": [
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "SAN ANTONIO",
@@ -506,45 +506,81 @@
     {
         "Fecha":  "2026-09-09",
         "Agencia":  "SAN ANTONIO",
-        "Numerador":  73,
-        "Emision":  87,
-        "Cancelada":  6,
-        "Denominador":  79,
-        "Tasa":  "92.41",
-        "CanceladasBAF":  22,
-        "TasaOperativa":  "76.84"
+        "Numerador":  "73",
+        "Emision":  "87",
+        "Cancelada":  "6",
+        "Denominador":  "79",
+        "Tasa":  "92.41"
     },
     {
         "Fecha":  "2026-09-09",
         "Agencia":  "TOTAL",
-        "Numerador":  723,
-        "Emision":  1099,
-        "Cancelada":  74,
-        "Denominador":  797,
-        "Tasa":  "90.72",
-        "CanceladasBAF":  186,
-        "TasaOperativa":  "79.54"
+        "Numerador":  "723",
+        "Emision":  "1099",
+        "Cancelada":  "74",
+        "Denominador":  "797",
+        "Tasa":  "90.72"
     },
     {
         "Fecha":  "2026-09-09",
         "Agencia":  "VALPARAISO",
-        "Numerador":  230,
-        "Emision":  472,
-        "Cancelada":  25,
-        "Denominador":  255,
-        "Tasa":  "90.20",
-        "CanceladasBAF":  59,
-        "TasaOperativa":  "79.58"
+        "Numerador":  "230",
+        "Emision":  "472",
+        "Cancelada":  "25",
+        "Denominador":  "255",
+        "Tasa":  "90.20"
     },
     {
         "Fecha":  "2026-09-09",
         "Agencia":  "VINA DEL MAR",
-        "Numerador":  420,
-        "Emision":  540,
-        "Cancelada":  43,
-        "Denominador":  463,
-        "Tasa":  "90.71",
-        "CanceladasBAF":  105,
-        "TasaOperativa":  "80.00"
+        "Numerador":  "420",
+        "Emision":  "540",
+        "Cancelada":  "43",
+        "Denominador":  "463",
+        "Tasa":  "90.71"
+    },
+    {
+        "Fecha":  "2026-09-10",
+        "Agencia":  "SAN ANTONIO",
+        "Numerador":  81,
+        "Emision":  90,
+        "Cancelada":  6,
+        "Denominador":  87,
+        "Tasa":  "93.10",
+        "CanceladasBAF":  23,
+        "TasaOperativa":  "77.88"
+    },
+    {
+        "Fecha":  "2026-09-10",
+        "Agencia":  "TOTAL",
+        "Numerador":  800,
+        "Emision":  1036,
+        "Cancelada":  73,
+        "Denominador":  873,
+        "Tasa":  "91.64",
+        "CanceladasBAF":  203,
+        "TasaOperativa":  "79.76"
+    },
+    {
+        "Fecha":  "2026-09-10",
+        "Agencia":  "VALPARAISO",
+        "Numerador":  263,
+        "Emision":  391,
+        "Cancelada":  23,
+        "Denominador":  286,
+        "Tasa":  "91.96",
+        "CanceladasBAF":  64,
+        "TasaOperativa":  "80.43"
+    },
+    {
+        "Fecha":  "2026-09-10",
+        "Agencia":  "VINA DEL MAR",
+        "Numerador":  456,
+        "Emision":  555,
+        "Cancelada":  44,
+        "Denominador":  500,
+        "Tasa":  "91.20",
+        "CanceladasBAF":  116,
+        "TasaOperativa":  "79.72"
     }
 ]}
