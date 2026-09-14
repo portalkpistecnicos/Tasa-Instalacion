@@ -273,7 +273,7 @@ async function cargar() {
   const ultimaFecha = fechas[fechas.length - 1];
   const ultimos = registros.filter(r => r.Fecha === ultimaFecha);
   const total = ultimos.find(r => r.Agencia === 'TOTAL');
-  const agencias = ultimos.filter(r => r.Agencia !== 'TOTAL').sort((a, b) => parseFloat(b.Tasa) - parseFloat(a.Tasa));
+  const agencias = ultimos.filter(r => r.Agencia !== 'TOTAL' && r.Agencia !== 'QUILPUE').sort((a, b) => parseFloat(b.Tasa) - parseFloat(a.Tasa));
 
   // Hero
   if (total) {
@@ -339,7 +339,7 @@ async function cargar() {
   });
 
   // Grafico: linea con enfasis -- TOTAL en naranja grueso, agencias en gris fino
-  const agenciasUnicas = [...new Set(registros.map(r => r.Agencia))].filter(a => a !== 'TOTAL');
+  const agenciasUnicas = [...new Set(registros.map(r => r.Agencia))].filter(a => a !== 'TOTAL' && a !== 'QUILPUE');
   const grisEnfasis = ['#b9c4d1', '#8fa0b3', '#6b7c8f'];
   const datasets = agenciasUnicas.map((ag, i) => ({
     type: 'line',
