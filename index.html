@@ -338,36 +338,36 @@ async function cargar() {
     tbodyOperativa.appendChild(tr);
   });
 
-  // Grafico: TOTAL en enfasis (naranja), agencias en gris
+  // Grafico: linea con enfasis -- TOTAL en naranja grueso, agencias en gris fino
   const agenciasUnicas = [...new Set(registros.map(r => r.Agencia))].filter(a => a !== 'TOTAL');
   const grisEnfasis = ['#b9c4d1', '#8fa0b3', '#6b7c8f'];
   const datasets = agenciasUnicas.map((ag, i) => ({
-    type: 'bar',
+    type: 'line',
     label: ag,
     data: fechas.map(f => {
       const rec = registros.find(r => r.Fecha === f && r.Agencia === ag);
       return rec ? parseFloat(rec.Tasa) : null;
     }),
+    borderColor: grisEnfasis[i % grisEnfasis.length],
     backgroundColor: grisEnfasis[i % grisEnfasis.length],
-    borderRadius: 4,
-    borderSkipped: false,
-    maxBarThickness: 22,
-    categoryPercentage: 0.7,
-    barPercentage: 0.92
+    borderWidth: 2,
+    pointRadius: 3,
+    tension: 0.25,
+    spanGaps: true
   }));
   datasets.push({
-    type: 'bar',
+    type: 'line',
     label: 'TOTAL',
     data: fechas.map(f => {
       const rec = registros.find(r => r.Fecha === f && r.Agencia === 'TOTAL');
       return rec ? parseFloat(rec.Tasa) : null;
     }),
+    borderColor: '#F47C02',
     backgroundColor: '#F47C02',
-    borderRadius: 4,
-    borderSkipped: false,
-    maxBarThickness: 22,
-    categoryPercentage: 0.7,
-    barPercentage: 0.92
+    borderWidth: 3,
+    pointRadius: 4,
+    tension: 0.25,
+    spanGaps: true
   });
   datasets.push({
     type: 'line',
@@ -377,12 +377,11 @@ async function cargar() {
     borderDash: [4, 4],
     borderWidth: 1.5,
     pointRadius: 0,
-    tension: 0,
-    order: -1
+    tension: 0
   });
 
   new Chart(document.getElementById('grafico'), {
-    type: 'bar',
+    type: 'line',
     data: { labels: fechas, datasets: datasets },
     options: {
       responsive: true,
