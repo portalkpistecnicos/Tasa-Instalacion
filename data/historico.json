@@ -649,15 +649,6 @@
     },
     {
         "Fecha":  "2026-09-13",
-        "Agencia":  "QUILPUE",
-        "Numerador":  "1",
-        "Emision":  "0",
-        "Cancelada":  "0",
-        "Denominador":  "1",
-        "Tasa":  "100.00"
-    },
-    {
-        "Fecha":  "2026-09-13",
         "Agencia":  "SAN ANTONIO",
         "Numerador":  "114",
         "Emision":  "136",
@@ -694,17 +685,6 @@
     },
     {
         "Fecha":  "2026-09-14",
-        "Agencia":  "QUILPUE",
-        "Numerador":  1,
-        "Emision":  0,
-        "Cancelada":  0,
-        "Denominador":  1,
-        "Tasa":  "100.00",
-        "CanceladasBAF":  0,
-        "TasaOperativa":  "100.00"
-    },
-    {
-        "Fecha":  "2026-09-14",
         "Agencia":  "SAN ANTONIO",
         "Numerador":  114,
         "Emision":  148,
@@ -717,13 +697,13 @@
     {
         "Fecha":  "2026-09-14",
         "Agencia":  "TOTAL",
-        "Numerador":  1072,
+        "Numerador":  1071,
         "Emision":  1603,
         "Cancelada":  116,
-        "Denominador":  1188,
-        "Tasa":  "90.24",
+        "Denominador":  1187,
+        "Tasa":  "90.23",
         "CanceladasBAF":  256,
-        "TasaOperativa":  "80.72"
+        "TasaOperativa":  "80.71"
     },
     {
         "Fecha":  "2026-09-14",
