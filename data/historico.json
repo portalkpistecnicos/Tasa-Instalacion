@@ -793,46 +793,57 @@
     },
     {
         "Fecha":  "2026-09-17",
+        "Agencia":  "LOS ANDES",
+        "Numerador":  1,
+        "Emision":  0,
+        "Cancelada":  0,
+        "Denominador":  1,
+        "Tasa":  "100.00",
+        "CanceladasBAF":  0,
+        "TasaOperativa":  "100.00"
+    },
+    {
+        "Fecha":  "2026-09-17",
         "Agencia":  "SAN ANTONIO",
-        "Numerador":  136,
-        "Emision":  187,
-        "Cancelada":  12,
-        "Denominador":  148,
-        "Tasa":  "91.89",
-        "CanceladasBAF":  37,
-        "TasaOperativa":  "78.61"
+        "Numerador":  145,
+        "Emision":  207,
+        "Cancelada":  14,
+        "Denominador":  159,
+        "Tasa":  "91.19",
+        "CanceladasBAF":  38,
+        "TasaOperativa":  "79.23"
     },
     {
         "Fecha":  "2026-09-17",
         "Agencia":  "TOTAL",
-        "Numerador":  1265,
-        "Emision":  1903,
-        "Cancelada":  143,
-        "Denominador":  1408,
-        "Tasa":  "89.84",
-        "CanceladasBAF":  313,
-        "TasaOperativa":  "80.16"
+        "Numerador":  1339,
+        "Emision":  2088,
+        "Cancelada":  158,
+        "Denominador":  1497,
+        "Tasa":  "89.45",
+        "CanceladasBAF":  339,
+        "TasaOperativa":  "79.80"
     },
     {
         "Fecha":  "2026-09-17",
         "Agencia":  "VALPARAISO",
-        "Numerador":  391,
-        "Emision":  681,
-        "Cancelada":  37,
-        "Denominador":  428,
-        "Tasa":  "91.36",
-        "CanceladasBAF":  94,
-        "TasaOperativa":  "80.62"
+        "Numerador":  412,
+        "Emision":  735,
+        "Cancelada":  40,
+        "Denominador":  452,
+        "Tasa":  "91.15",
+        "CanceladasBAF":  99,
+        "TasaOperativa":  "80.63"
     },
     {
         "Fecha":  "2026-09-17",
         "Agencia":  "VINA DEL MAR",
-        "Numerador":  738,
-        "Emision":  1035,
-        "Cancelada":  94,
-        "Denominador":  832,
-        "Tasa":  "88.70",
-        "CanceladasBAF":  182,
-        "TasaOperativa":  "80.22"
+        "Numerador":  781,
+        "Emision":  1146,
+        "Cancelada":  104,
+        "Denominador":  885,
+        "Tasa":  "88.25",
+        "CanceladasBAF":  202,
+        "TasaOperativa":  "79.45"
     }
 ]}
