@@ -1,4 +1,4 @@
-﻿{"meta": 80.7, "actualizado": "2026-10-03", "registros": [
+﻿{"meta": 80.7, "actualizado": "2026-10-04", "registros": [
     {
         "Fecha":  "2026-08-24",
         "Agencia":  "SAN ANTONIO",
@@ -1424,6 +1424,51 @@
     {
         "Fecha":  "2026-10-03",
         "Agencia":  "LOS ANDES",
+        "Numerador":  "1",
+        "Emision":  "0",
+        "Cancelada":  "0",
+        "Denominador":  "1",
+        "Tasa":  "100.00"
+    },
+    {
+        "Fecha":  "2026-10-03",
+        "Agencia":  "SAN ANTONIO",
+        "Numerador":  "272",
+        "Emision":  "384",
+        "Cancelada":  "26",
+        "Denominador":  "298",
+        "Tasa":  "91.28"
+    },
+    {
+        "Fecha":  "2026-10-03",
+        "Agencia":  "TOTAL",
+        "Numerador":  "2405",
+        "Emision":  "3578",
+        "Cancelada":  "332",
+        "Denominador":  "2737",
+        "Tasa":  "87.87"
+    },
+    {
+        "Fecha":  "2026-10-03",
+        "Agencia":  "VALPARAISO",
+        "Numerador":  "751",
+        "Emision":  "1130",
+        "Cancelada":  "91",
+        "Denominador":  "842",
+        "Tasa":  "89.19"
+    },
+    {
+        "Fecha":  "2026-10-03",
+        "Agencia":  "VINA DEL MAR",
+        "Numerador":  "1381",
+        "Emision":  "2064",
+        "Cancelada":  "215",
+        "Denominador":  "1596",
+        "Tasa":  "86.53"
+    },
+    {
+        "Fecha":  "2026-10-04",
+        "Agencia":  "LOS ANDES",
         "Numerador":  1,
         "Emision":  0,
         "Cancelada":  0,
@@ -1433,7 +1478,7 @@
         "TasaOperativa":  "100.00"
     },
     {
-        "Fecha":  "2026-10-03",
+        "Fecha":  "2026-10-04",
         "Agencia":  "SAN ANTONIO",
         "Numerador":  272,
         "Emision":  384,
@@ -1444,7 +1489,7 @@
         "TasaOperativa":  "76.19"
     },
     {
-        "Fecha":  "2026-10-03",
+        "Fecha":  "2026-10-04",
         "Agencia":  "TOTAL",
         "Numerador":  2405,
         "Emision":  3578,
@@ -1455,7 +1500,7 @@
         "TasaOperativa":  "78.80"
     },
     {
-        "Fecha":  "2026-10-03",
+        "Fecha":  "2026-10-04",
         "Agencia":  "VALPARAISO",
         "Numerador":  751,
         "Emision":  1130,
@@ -1466,7 +1511,7 @@
         "TasaOperativa":  "78.47"
     },
     {
-        "Fecha":  "2026-10-03",
+        "Fecha":  "2026-10-04",
         "Agencia":  "VINA DEL MAR",
         "Numerador":  1381,
         "Emision":  2064,
